@@ -1,4 +1,4 @@
-# Integração do NODE com o AMQP 1.0
+# Integração do Node com o AMQP 1.0
 
 Aplicação desenvolvida para realizar testes de integração do NodeJS com o AMQP na versão 1.0.
 

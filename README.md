@@ -1,6 +1,8 @@
 # Integração do NODE com o AMQP 1.0
 
-Aplicação desenvolvida para realizar testes de integraçào com o AMQP na versão 1.0.
+Aplicação desenvolvida para realizar testes de integração do NodeJS com o AMQP na versão 1.0.
+
+## Configurado o Docker
 
 O AMQP será executado no docker e para realizar a execução siga os seguintes passos:
 
@@ -24,18 +26,19 @@ O AMQP será executado no docker e para realizar a execução siga os seguintes 
    yarn docker:run
    ```
 
-3. Acesse o [site local do AMQP](http://localhost:15672/#/queues) para criar a fila. Caso seja necessário por o usuário e a senha, você poderá encontrar no Dockerfile do projeto.
+3. Acesse o [site local do AMQP](http://localhost:15672/#/queues) para criar a fila. Caso seja necessário por o usuário e a senha, você poderá encontrar essas informações no Dockerfile do projeto.
 
-4. Ná pagina de **Queues** na área **Add a new queue** adicione a fila com o nome **fila.teste** no campo `name` e o campo `Durability` adicione `Transient` e clique no botão `Add queue`.
+4. Na página de **Queues** na área **Add a new queue** adicione a fila com o nome **fila.teste** no campo `name` e no campo `Durability` altere para `Transient` e clique no botão `Add queue`.
 
-5. Clique na fila **fila.teste** que surgir acima do do **Add a new queue**.
-6. No campo `Payload` do **Publish message** adicione algum texto para ser consumido pela aplicação em node e clique no botão `Publish message`.
-   > Obs: O processo de publicação poderá se repitido inumeras vezes.
+5. Clique na fila **fila.teste** que surgir acima da área **Add a new queue**.
 
-# Executado a aplicação
+6. No campo `Payload` do **Publish message** adicione algum texto para ser consumido pela aplicação e clique no botão `Publish message`.
+   > Obs.: O processo de publicação poderá se repetido inúmeras vezes.
+
+## Executado a aplicação
 
 1. Para executar a aplicação será necessário a versão >= v14.19 do NodeJS e ter o Yarn >= 1.22.19 configurado.
-2. Instale as dependencies com o comando:
+2. Instale as dependências com o comando:
    ```bash
    yarn install
    ```
